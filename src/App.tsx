@@ -49,7 +49,7 @@ export const App = () => {
     visibleGoods = [...visibleGoods].reverse();
   }
 
-  function setSortOfGooods(type: SortType) {
+  function SortGoods(type: SortType) {
     setSortType(type);
     setGoods(sortGoods(initialGoods, type));
   }
@@ -62,7 +62,7 @@ export const App = () => {
           className={cn('button is-info', {
             'is-light': sortType !== SortType.ALPHABETIC,
           })}
-          onClick={() => setSortOfGooods(SortType.ALPHABETIC)}
+          onClick={() => SortGoods(SortType.ALPHABETIC)}
         >
           Sort alphabetically
         </button>
@@ -72,7 +72,7 @@ export const App = () => {
           className={cn('button is-info', {
             'is-light': sortType !== SortType.LENGTH,
           })}
-          onClick={() => setSortOfGooods(SortType.LENGTH)}
+          onClick={() => SortGoods(SortType.LENGTH)}
         >
           Sort by length
         </button>
